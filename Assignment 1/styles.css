@@ -19,7 +19,7 @@ html, body {
 .layout-container {
     width: 100%;
     height: 100vh;
-    border: 9px solid #FFFFFF;
+    border: 30px solid #FFFFFF;
     display: flex; 
     
     position: relative; 
@@ -31,8 +31,8 @@ html, body {
     background-color: #f5c526;
     width: 60%;
     height: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     position:relative;
     overflow:hidden;
 }
@@ -41,18 +41,19 @@ html, body {
     background-color: #f7e3bc;
     width: 40%;
     height: 100%;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .logo img{
-    width: 100px;
+    width: 250px;
     height: auto;
     display: flex;
+    padding: 30px;
 }
 
 .hamburger-menu{
-    width: 30px;
+    width: 100px;
     height: 20px;
     display: flex;
     flex-direction: column;
@@ -81,12 +82,12 @@ html, body {
     
     position: absolute;
     
-    
+    width: 40vw;
     top: 50%; 
     
-    
+    min-width:480px;
     left: 65%;
-    height:300px;
+    height:auto;
     
    
     
@@ -113,7 +114,7 @@ html, body {
 
 .text-content {
     
-    max-width: 275px; 
+    max-width: 500px; 
     position: relative;
     z-index:2;
 }
@@ -125,7 +126,7 @@ h1, p {
 .main-heading {
    font-family: "Poppins";
    font-weight: bold;
-   font-size: 3rem;
+   font-size: 13rem;
    letter-spacing: 0.1rem;
    margin-top:0px;
    
@@ -135,12 +136,14 @@ h1, p {
     font-family: "Poppins", sans-serif;
     font-size: 10px;
     padding:0px; 
-    letter-spacing: 0.2rem;       
+    font-size: 1.5rem;
+    letter-spacing: 5px;       
 }
 
 .description{
     font-family:"Poppins", sans-serif;
-    font-size: 14px;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 
@@ -172,9 +175,9 @@ h1, p {
 
 .watermark {
    position: absolute;
-    bottom: -35px; 
+    bottom: -150px; 
     left: 50px; 
-    width: 100px; 
+    width: 400px; 
     opacity: 0.1; 
     z-index: 1; 
     pointer-events: none;
