@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1310;
+    color: #e8ddd0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;   
+    backdrop-filter: blur(12px);    
+    
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 60px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.logo-inline-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links li a {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #ccc4b8;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #c9953a, #e8c36a);
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #e8c36a;
+}
+
+
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ccc4b8;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    border-color: #e8c36a;
+    color: #e8c36a;
+    background: rgba(232, 195, 106, 0.08);
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: start;
+    margin-top: -60px;
+}
+
+.hero-subtitle {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 22px;
+    color: #ecdec4;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.7);
+}
+
+.hero-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(48px, 8vw, 100px);
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 8px;
+    line-height: 1.1;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.6), 0 0 80px rgba(201, 149, 58, 0.15);
+}
+
+.title-gap {
+    display: inline-block;
+    width: clamp(60px, 12vw, 160px);
+}
+
+.hero-tagline {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 20px;
+    color: #ecdec4;
+    letter-spacing: 3px;
+    margin-top: 4px;
+   text-align:end;
+}
+
+.hero-character {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    z-index: 3;
+    height: 700px;
+    width: clamp(300px, 40vw, 520px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.character-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 40px rgba(0,0,0,0.5));
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.hero-cta {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.mint-btn {
+    display: inline-block;
+    padding: 14px 42px;
+    background: linear-gradient(135deg, #e79d0a, #ccaf8b);
+    color: #1a1310;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.mint-btn:hover {
+    background: linear-gradient(135deg, #fff, #f5f0e6);
+    box-shadow: 0 6px 40px rgba(201, 149, 58, 0.3), 0 0 0 1px rgba(201, 149, 58, 0.3);
+    transform: translateY(-2px);
+}
+
+.hero-curve {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    line-height: 0;
+}
+
+.hero-curve svg {
+    width: 100%;
+    height: 250px;
+}
+
+.hero-curve svg path{
+    fill: #2a252a;
+}
+
+.vision-section {
+    position: relative;
+    background-color:#2a252a;
+    padding: 80px 40px 100px;
+}
+
+.vision-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vision-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 8px;
+    color: #ecdec4;
+    margin-bottom: 16px;
+}
+
+.vision-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 50px;
+}
+
+.divider-line {
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9953a, transparent);
+}
+
+.divider-diamond {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c9953a;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.vision-content {
+    display: flex;
+    gap: 60px;
+}
+
+.vision-col {
+    flex: 1;
+}
+
+.vision-col p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #b8a992;
+    font-weight: 400;
+}
+
+.vision-col p strong {
+    color: #ecdec4;
+    font-weight: 600;
+}
+
+.vision-col p u {
+    text-decoration-color: #c9953a;
+    text-underline-offset: 3px;
+    color: #ecdec4;
+}
